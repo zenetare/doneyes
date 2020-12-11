@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>FrontendFunn - HTML5 Video Player with Custom Controls</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+      integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
+      crossorigin="anonymous"
+    />
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Exo:400,600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Teko:400,600&display=swap");
+:root {
+  --player-background: #23ce6b;
+  --player-foreGround: #edf2f4;
+  --player-controls: #106132;
+  --hover-color: #1fb860;
+  --font-family: 'Exo', sans-serif;
+}
+
+
+
+
+.video-topbar {
+  height: 44px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--player-background);
+  color: var(--player-controls);
+  text-transform: uppercase;
+  font-weight: 600;
+  z-index: 2;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.video-player {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  font-family: var(--font-family);
+  background-color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.video-player video {
+  width: 100%;
+}
+
+.video-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: var(--player-background);
+  z-index: 2;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.video-controls .icon {
+  position: absolute;
+}
+
+.video-controls .seekbar {
+  width: 100%;
+  height: 4px;
+  background-color: var(--player-controls);
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.video-controls .seekbar .progress {
+  background-color: var(--player-foreGround);
+  width: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  -webkit-transition: all ease 0.25s;
+  transition: all ease 0.25s;
+}
+
+.video-controls .control-btn {
+  padding: 0;
+  height: 40px;
+  min-height: 40px;
+  min-width: 40px;
+  width: 40px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 0;
+  background-color: transparent;
+  color: var(--player-controls);
+  outline: 0;
+  cursor: pointer;
+}
+
+.video-controls .control-btn:hover {
+  color: var(--player-foreGround);
+  background-color: var(--hover-color);
+}
+
+.video-controls .video-playback-controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.video-controls .toggle-play-pause.play .pause-icon {
+  display: none;
+}
+
+.video-controls .toggle-play-pause.pause .play-icon {
+  display: none;
+}
+
+.video-controls .toggle-volume.on .volume-off {
+  display: none;
+}
+
+.video-controls .toggle-volume.off .volume-on {
+  display: none;
+}
+
+.video-controls .video-volume-control {
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 4px;
+}
+
+.video-controls .video-timings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: var(--player-controls);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: auto;
+  padding: 0 4px;
+}
+
+.video-controls .video-timings .time {
+  width: 70px;
+  text-align: center;
+}
+
+.video-player.hide-controls .video-topbar {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.video-player.hide-controls .video-controls {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+.container {
+  padding-top: 40px;
+  height: calc(100% - 40px);
+}
+
+/*# sourceMappingURL=style.css.map */
+    </style>
+  </head>
+
+  <body>
+
+
+      <div class="video-player">
+
+        <video
+          src="https://www.videvo.net/videvo_files/converted/2018_07/videos/180607_A_101.mp466981_jw.mp4"
+        ></video>
+        <div class="video-controls">
+          <div class="video-top-controls">
+            <div class="video-seekbar seekbar">
+              <span class="progress"></span>
+            </div>
+          </div>
+
+          <div class="video-playback-controls">
+            <button class="control-btn toggle-play-pause play">
+              <i class="fas fa-play play-icon icon"></i>
+              <i class="fas fa-pause pause-icon icon"></i>
+            </button>
+            <div class="video-volume-control">
+              <button class="control-btn toggle-volume on">
+                <i class="fas fa-volume-up icon volume-on"></i>
+                <i class="fas fa-volume-mute icon volume-off"></i>
+              </button>
+              <div class="volume-seekbar seekbar">
+                <span class="progress"></span>
+              </div>
+            </div>
+            <div class="video-timings">
+              <div class="start-time time">00:00:00</div>
+              /
+              <div class="end-time time">00:00:00</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"
+      integrity="sha256-jnOjDTXIPqall8M0MyTSt98JetJuZ7Yu+1Jm7hLTF7U="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
