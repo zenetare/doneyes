@@ -16,10 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from blogs import views
+from blogs import hhhhh
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('new/', views.new, name='new'),
-    path('ajax/$', views.ajax, name='ajax'),
+    path('new3/', views.new3, name='new3'),
+    path('grabImageVid/$', hhhhh.grabImageVid, name='grabImageVid'),
+    path('ajax/$', hhhhh.ajax, name='ajax'),
+    path('tarn/$', hhhhh.tarn, name='tarn'),
 ]

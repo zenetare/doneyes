@@ -7,7 +7,33 @@
     <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
           <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelementplayer.css">
-
+<style>
+  .text-tarn {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: auto;
+  padding: 13px;
+  z-index: 200;
+}
+.text-tarn textarea {
+  max-width: 100%;
+  min-width: 100%;
+  border: 0;
+  background-color: #232323db;
+  color: #fff;
+  padding: 22px;
+  font-family: system-ui;
+  font-weight: bold;
+  line-height: 27px;
+  border-radius: 20px;
+  outline: none;
+}
+.pleas {
+  position: absolute;
+  right: 0;
+}
+</style>
 </head>
 <body>
     <div class="content_all">
@@ -38,7 +64,7 @@
         <div class="video-player">
 
         <video
-          src="https://r1---sn-hgn7yn7s.googlevideo.com/videoplayback?expire=1607741877&ei=Vd3TX5DgMM2e8gOKjJ34DQ&ip=45.93.70.14&id=o-AEOgC1JhEPxoNmjJ0H_K0Hq5KCcwQ-fyvCmrjg88pO2g&itag=18&source=youtube&requiressl=yes&vprv=1&mime=video%2Fmp4&ns=oODE2twPxoTiQ030R1V4pjMF&gir=yes&clen=23611591&ratebypass=yes&dur=429.638&lmt=1606994183767548&fvip=1&c=WEB&txp=6210222&n=5sL18vB8Qw4JTpU8h&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRAIgNJBjFtBVnPBw5pY72NtxAaJPXNswho_iUeLeW5Aj0YECIDqmaDdZm74FznkD3v3zaJo5f9kM9GXaN-QhGV1YgZPK&from_cache=True&rm=sn-5hneer7e,sn-p5h-g53e7e&req_id=d4ba2c0f1d24a3ee&ipbypass=yes&redirect_counter=2&cms_redirect=yes&mh=RA&mip=160.178.96.251&mm=29&mn=sn-hgn7yn7s&ms=rdu&mt=1607720202&mv=m&mvi=1&pl=21&lsparams=ipbypass,mh,mip,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRgIhALjCBzNrltxSIJFcYxh5tVN0htWgWO3zK8Zt1tAfVNCDAiEAhz6gIF3NAWPskIJ6d68ZnH2fxQ6Emjd4ZZWSWgMg6-g%3D"
+src="https://r4---sn-hgn7yn7z.googlevideo.com/videoplayback?expire=1609075655&ei=ZzfoX8qYEI_i1wKG0K_YCQ&ip=45.130.62.81&id=o-AKuxym6zTdLQiET8NA2pk7MHu2pUTLjN6EQCEOyU04Yh&itag=18&source=youtube&requiressl=yes&vprv=1&mime=video/mp4&ns=qFOFXZ-6ZhytQg5GcNvP7IcF&gir=yes&clen=23061608&ratebypass=yes&dur=429.662&lmt=1606994346045964&fvip=4&c=WEB&txp=6210222&n=xTSD3NLq5VtjMx5N&sparams=expire,ei,ip,id,itag,source,requiressl,vprv,mime,ns,gir,clen,ratebypass,dur,lmt&sig=AOq0QJ8wRAIgd4DFkesHIDMifR34FMiQmqjse0wla6l8tGHOd3TzEF4CIEUW7X5T8juBGpVvRbVy0hYn9DmVSAr6YQUw9S86UEIy&avi=K1A%2FHwERIiwAVF9GZkhtdyQCDzEDNT5HSFQmDVNZV0E1FigaFRwsBwECFkYZahAFZRdaRFQZIwdUFR0eT1pYWzcUDQUEBCIMEQ8RFRcTHhEkBQwEFQ04DAsHBBdHV1VbOkIFDB0XOwcKG1RWEAUHBWdKUB1HKWFHJx8VDEZDZlo9FxoCBBk9R15UPjgBAAQDaUJcRVNGeTlGWjlGEgcCC2VLXERUQhFHOQpUUhMIAgZkQlxDR1hvNQgXHAVBWF5aJAs6AgQAOBZGTEcraBMeEQYbDRMKPSMDCyMXCGpfVlYoUFNGSVYUMQcZEApXQ0sRalA5IkdYbzUWGR0dAQsQWyQGGUxKW3lQSkdWVA0HAB1oQ1NOVUR9SkZaRylCSX9aPhYqGRAaORcdVF9GbnAQH3IxHAQXESMRMB8IAVBFU14gUFNUVEJ9XFRDUVQWBBAfcjcRAhcVLhELBDEdU1QQCXIYGhkLPSM1BREARl4%3D&from_cache=True&rm=sn-5hnele7z&req_id=7de82ba7cc29a3ee&ipbypass=yes&redirect_counter=2&cm2rm=sn-p5h-g53l7z&cms_redirect=yes&mh=BC&mip=105.158.20.239&mm=29&mn=sn-hgn7yn7z&ms=rdu&mt=1609053875&mv=m&mvi=4&pl=21&lsparams=ipbypass,mh,mip,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRQIhAP7h03MvOksEkZP50oRDDUcB8tj8UiSjuv02V5lyJW9ZAiBF1ahurx3w4Ha7E-oXAzJuGo4Xr2pw6ET4WyWY9nAvmw%3D%3D"
         ></video>
         <div class="video-controls">
           <div class="video-top-controls">
@@ -194,7 +220,7 @@
             $('.pleas').show();
             $.ajax({
 
-                url: "{% url 'ajax' %}",
+                url: "{% url 'grabImageVid' %}",
                 method: 'GET',
                 data : { topTR:topTR, leftTR:leftTR, widthTR:widthTR, heightTR:heightTR },
                 success: function (response) {

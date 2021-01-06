@@ -1,0 +1,248 @@
+{% load static %}
+<! DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelementplayer.css">
+<style>
+    .text-tarn {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: auto;
+    padding: 13px;
+    z-index: 200;
+}
+.text-tarn textarea {
+    max-width: 100%;
+    min-width: 100%;
+    border: 0;
+    background-color: #232323db;
+    color: #fff;
+    padding: 22px;
+    font-family: system-ui;
+    font-weight: bold;
+    line-height: 27px;
+    border-radius: 20px;
+    outline: none;
+}
+.pleas {
+    position: absolute;
+    right: 0;
+}
+</style>
+
+</head>
+<body>
+    <div class="content_all">
+        <div class="container">
+
+            <div class="row-content" style="margin-top: 50px">
+                <div class="row top-row" style="margin-bottom: 30px">
+                    <div class="col-12 col-sm-12">
+
+                              <div class="pleas" style="display: none;">
+                                <h5>يرجى الإنتظار</h5>
+                              </div>
+                              <button class="add-tran btn-ca">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                            <button class="btn-play2 btn-ca">
+                                start
+                            </button>
+                            <button class="add-end btn-ca">
+                                end
+                            </button>
+                            <button class="btn-play btn-ca">
+                                <i class="fas fa-play"></i>
+                            </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-12">
+                        <div class="content-vid-url">
+   <div class="media-wrapper">
+        <div class="video-player">
+            <div class="text-tarn"></div>
+
+        <video
+         src="https://r2---sn-5hne6nsk.googlevideo.com/videoplayback?expire=1609100876&ei=7JnoX-OGKL2Fv_IP8tCyoAc&ip=91.132.127.142&id=o-ACZpLzBCAXui8uc5jDuorYhSDR4hjaTowcMstDN4F2hx&itag=22&source=youtube&requiressl=yes&vprv=1&mime=video/mp4&ns=y2Nz6YJDI9eMhDMAgwQuE5AF&ratebypass=yes&dur=429.754&lmt=1606994522131290&fvip=2&c=WEB&txp=6211222&n=kemOaCDN3HU2HhH_&sparams=expire,ei,ip,id,itag,source,requiressl,vprv,mime,ns,ratebypass,dur,lmt&sig=AOq0QJ8wRQIgX1jdFplyf5otFIdKlj6lyQEs6_hO41gWX9DFEPlDgEoCIQDFwUDNZ_13oZ_gwNYu3WjKLpAxmB0w-O1Nw1Ql8TcU-g==&avi=K1A%2FHwERIiwAVF9GZF9ZfQcVXB0UOhRHSFQmDVNZV0E1FigaFRwsBwECFkYZahAFZRdaRFQZIwdUFR0eT1pYWzcUDQUEBCIMEQ8RFRcTHhEkBQwEFQ04DAsHBBdHV1VbOkIFDB0XOwcKG1RWEAUHBWdKUB1HKWFHJx8VDEZDZlo9FxoCBBk9R15UPjgBAAQDaUJeTl1AejlGWjlGEgcCC2VLXERUQhFHOQpUUhMIAgRpQF5BR1hvNQgXHAVBWF5aJAs6AgQAOBZGTEcraBMeEQYbDRMKPSMDCyMXCGpfVlYoUFNGSVYUMQcZEApXQ0sRalA7I0dYbzUWGR0dAQsQWyQGGUxKW3RUSkdWVg0AAAR%2BQ11EX0x9VVRZR0gBfFNLHRsHEiYbOAsQBBxGGRN%2FcnJeSzUQBj8ACgIxDU5UQUcxHxlUX1Z8U1RPVVMaAwUEcl5LMx0APwQHAgoWd0hCVnJISxwWGyMsCiYEA0YTTw%3D%3D&from_cache=True&rm=sn-pouxga5o-vu2l7l&req_id=c526a3a97ee5a3ee&redirect_counter=2&cm2rm=sn-4g5esd7l&cms_redirect=yes&mh=3T&mip=105.158.20.239&mm=34&mn=sn-5hne6nsk&ms=ltu&mt=1609079076&mv=m&mvi=2&pl=21&lsparams=mh,mip,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRQIgJ-H83D5fmIZs2xOcCivAMYGZvIFZxBjFkUtagPlG400CIQCz-z5iOeGH8lVBcXa1hjbXFu5empO7Gzrdd55XN0bocw%3D%3D"       
+          >
+    
+    </video>
+        <div class="video-controls">
+          <div class="video-top-controls">
+            <div class="video-seekbar seekbar">
+              <span class="progress"></span>
+            </div>
+          </div>
+
+          <div class="video-playback-controls">
+            <button class="control-btn toggle-play-pause play">
+              <i class="fas fa-play play-icon icon"></i>
+              <i class="fas fa-pause pause-icon icon"></i>
+            </button>
+            <div class="video-volume-control">
+              <button class="control-btn toggle-volume on">
+                <i class="fas fa-volume-up icon volume-on"></i>
+                <i class="fas fa-volume-mute icon volume-off"></i>
+              </button>
+              <div class="volume-seekbar seekbar">
+                <span class="progress"></span>
+              </div>
+            </div>
+            <div class="video-timings">
+              <div class="start-time time">00:00:00</div>
+              /
+              <div class="end-time time">00:00:00</div>
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>                        </div>
+                        <div class="icon-vid" style="margin-top: 20px">
+                            <button class="">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <button class="hidden-char">
+                                <i class="fas fa-angle-down"></i>
+                            </button>
+                            <button class="hidden-up">
+                                <i class="fas fa-angle-up"></i>
+                            </button>
+
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5">
+                        <div class="content-tran">    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="{% static '/js/script.js' %}"></script>
+    <a href="#" class="llk" download="yyyyyyy.sbv">sbv</a>
+
+<script>
+
+$(document).ready(function() {
+
+    $('.hidden-char').click(function () {
+
+$('.video-controls').hide();
+
+});
+$('.hidden-up').click(function () {
+
+$('.video-controls').show();
+
+});
+    $('.btn-play').click(function () {
+      $('.toggle-play-pause').click()
+  })
+    $('.add-tran').click(function () {
+
+
+        var textarea = '<textarea></textarea>'
+
+        $('.text-tarn').addClass('please')
+        $('.text-tarn').html(textarea)
+
+        $('.btn-play2').click(function() {
+          if($('.text-tarn').hasClass('please')) {
+
+
+            $('.post-teran').removeClass('yesDoneEnd');
+            let  htmlTan = "";
+                      htmlTan += '<div class="yesDoneEnd post-teran col-12 col-sm-12" style="margin-bottom: -19px">';
+                        htmlTan += '<div class="body-tran">';
+                              htmlTan += '<div class="col-12 col-md-12" style="margin-bottom: 10px">';
+                                htmlTan += '<textarea>';
+                                    htmlTan +=  $('.text-tarn > textarea').val();
+                                htmlTan += '</textarea>';
+                              htmlTan += '</div>';
+                            htmlTan += '<div class="start-vid-ha col-5 col-sm-6" style="float: right">';
+                                htmlTan += '<input value="' + $('.start-time').html() + '" type="text">';
+                            htmlTan += '</div>';
+                            htmlTan += '<div class="end-vid-ha col-5 col-sm-6">';
+                                htmlTan += '<input type="text">';
+                            htmlTan += '</div>';
+                            htmlTan += '<div style="clear: both"></div>';
+                        htmlTan += '</div>';
+                    htmlTan += '</div>';
+
+
+                    $(".content-tran").append(htmlTan);
+                    $('.text-tarn').removeClass('please')
+                    $('.text-tarn').html('')
+
+
+
+          }
+
+
+        });
+        $('.add-end').click(function() {
+
+            console.log('fff');
+
+                $('.yesDoneEnd .end-vid-ha input').val($('.start-time').html());
+
+
+     
+        
+        });
+
+
+    });
+
+
+})
+
+</script>
+<script>
+    $('.llk').click(function() {
+                          
+    var textvalall = '';
+     for(i = 0; i < $('.content-tran > div').length; i++) {
+ 
+            str =  $('.post-teran .start-vid-ha input').eq(i).val();
+       
+ 
+            str2 = $('.post-teran .end-vid-ha input').eq(i).val();
+     
+ 
+            textvalall += str + ',' + str2; 
+            textvalall += "\n"
+            textvalall += $('.post-teran textarea').eq(i).html();
+            textvalall += "\n";
+            textvalall += "\n";
+ 
+ 
+     }
+ 
+ console.log(textvalall)
+ 
+ 
+     this.href = "data:text/plain;charset=UTF-8," + textvalall;
+ 
+    });
+ 
+     $('.add-end').click(function() {
+     
+         var endval = $('.start-time').html();
+         var cap1 = $('.content-tran > div').length - 1;
+         $('.post-teran .end-vid-ha input').eq(cap1).val(endval)
+ 
+     });
+ 
+ </script>
+</body>
+</html>
